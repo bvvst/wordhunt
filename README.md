@@ -1,4 +1,3 @@
 wordhunt solver
 
-## try it here
-[https://wordhunt.vercel.app/]
+## try it here -> https://wordhunt.vercel.app/
