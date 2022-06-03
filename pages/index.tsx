@@ -16,7 +16,7 @@ const Home: NextPage = () => {
     let solutionList: solutiontype[] = []
     sowpodDictionary.forEach(word => {
       if (word.length < 3) return
-      let a = findWordInMap(word, charactersToMap(wordMap))
+      let a = findWordInMap(word, charactersToMap(wordMap.toLowerCase()))
       if (!a) return
       if (a.length > 1) {
         solutionList.push({
