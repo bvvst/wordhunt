@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { findWordInMap, charactersToMap,solutiontype } from "utils/solver";
 import { sowpods } from "dictionary";
 import Solution from "@components/solution";
-import VerificationInput from "react-verification-input";
 import AuthCode from 'react-auth-code-input';
+import Sequencemap from "@components/sequencemap";
 
 const Home: NextPage = () => {
   const [wordMap, setWordMap] = useState<string>("")
@@ -37,7 +37,8 @@ const Home: NextPage = () => {
     setSolutions(solutionList)
   }, [wordMap])
   return (
-    <div className="flex py-10 pt-0 md:pt-10 text-white w-screen h-full px-6 md:px-0">
+    <div className="flex py-10 pt-0 md:pt-10 text-white w-screen h-full px-6 md:px-0 relative">
+     
       <div className="flex flex-col text-center m-auto">
         <div className="flex flex-col max-w-xl">
           <div className="flex bg-white flex-col gap-1 pt-6">
@@ -62,7 +63,7 @@ const Home: NextPage = () => {
           </span>
         {solutions.map((sol, i) => (
           <div className="flex" key={i}>
-            <Solution word={sol.word} sequence={sol.sequence} ></Solution>
+            <Solution word={sol.word} sequence={sol.sequence} lettermap={charactersToMap(wordMap.toLowerCase())} />
 
           </div>
         ))}

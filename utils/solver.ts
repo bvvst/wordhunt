@@ -13,7 +13,7 @@ export const exampleMap = "shiihrtunoaeteno"
 
 export const charactersToMap = (boggle: string) => {
     let chars = boggle.split("")
-    if (chars.length !== 16) return null
+    if (chars.length !== 16) return []
     const charMap: mapValue[] = chars.map((char, i) => {
         if (i < 4) {
             return {
