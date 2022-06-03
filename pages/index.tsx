@@ -48,14 +48,14 @@ const Home: NextPage = () => {
         </div>
         <span className="text-center text-[#D6EDD5] mt-6">if this helps you beat your friends give me a follow on twitter</span>
         <span className="text-white text-center font-bold">@bvvst</span>
-        <div className="flex gap-4 mt-6">
-          <div className="flex flex-col">
+        <div className="flex md:flex-row flex-col gap-4 mt-6">
+          <div className="flex md:flex-col">
           <AuthCode length={16} inputClassName="w-16 h-16 rounded-md text-black text-center font-bold text-[44px] uppercase bg-[url('/tile.png')] bg-contain drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)]"
-        containerClassName="grid grid-cols-4 gap-3 p-3 bg-[#495D45] border-4 border-[#A4E693] rounded-xl"
+        containerClassName="grid grid-cols-4 gap-3 p-3 bg-[#495D45] border-4 border-[#A4E693] rounded-xl mx-auto"
         onChange={e => setWordMap(e)} />
           </div>
         
-        <div className="flex flex-grow bg-[#355434] rounded-lg p-2 px-3">
+        <div className="flex flex-grow bg-[#355434] rounded-lg p-2 px-3 md:mx-0 mx-auto">
           <div className="flex flex-col gap-1">
           <span className=" uppercase text-[#9BB69A] font-bold">
             {solutions.length} words found
