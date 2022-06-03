@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from 'next/head'
 import { useEffect, useState } from "react";
 import { findWordInMap, charactersToMap,solutiontype } from "utils/solver";
 import { sowpods } from "dictionary";
@@ -38,7 +39,11 @@ const Home: NextPage = () => {
   }, [wordMap])
   return (
     <div className="flex py-10 pt-0 md:pt-10 text-white w-screen h-full px-6 md:px-0 relative">
-     
+      <Head>
+        <title>WordHunt Solver by luke</title>
+        <meta property="og:image" content="https://i.imgur.com/S8ajcfB.png" />
+      </Head>
+
       <div className="flex flex-col text-center m-auto">
         <div className="flex flex-col max-w-xl">
           <div className="flex bg-white flex-col gap-1 pt-6">
@@ -48,7 +53,7 @@ const Home: NextPage = () => {
           <img className="flex -translate-y-1" src="paper.png" alt="" />
         </div>
         <span className="text-center text-[#D6EDD5] mt-6">if this helps you beat your friends give me a follow on twitter</span>
-        <span className="text-white text-center font-bold">@bvvst</span>
+        <a href="https://twitter.com/bvvst" className="text-white text-center font-bold">@bvvst</a>
         <div className="flex md:flex-row flex-col gap-4 mt-6">
           <div className="flex md:flex-col">
           <AuthCode length={16} inputClassName="w-16 h-16 rounded-md text-black text-center font-bold text-[44px] uppercase bg-[url('/tile.png')] bg-contain drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)]"
