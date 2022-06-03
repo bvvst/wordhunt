@@ -559,8 +559,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .text-center {
   text-align: center;
@@ -639,5 +646,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:flex-col {
     flex-direction: column;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .md\:pt-10 {
+    padding-top: 2.5rem;
   }
 }

@@ -37,7 +37,7 @@ const Home: NextPage = () => {
     setSolutions(solutionList)
   }, [wordMap])
   return (
-    <div className="flex py-10   text-white w-screen h-full">
+    <div className="flex py-10 pt-0 md:pt-10 text-white w-screen h-full px-6 md:px-0">
       <div className="flex flex-col text-center m-auto">
         <div className="flex flex-col max-w-xl">
           <div className="flex bg-white flex-col gap-1 pt-6">
