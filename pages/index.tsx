@@ -58,8 +58,8 @@ const Home: NextPage = () => {
           <span className=" uppercase text-[#9BB69A] font-bold">
             {solutions.length} words found
           </span>
-        {solutions.map(sol => (
-          <div className="flex">
+        {solutions.map((sol, i) => (
+          <div className="flex" key={i}>
             <Solution word={sol.word} sequence={sol.sequence} ></Solution>
 
           </div>
