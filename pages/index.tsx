@@ -37,16 +37,18 @@ const Home: NextPage = () => {
     setSolutions(solutionList)
   }, [wordMap])
   return (
-    <div className="flex bg-[url('/whpattern.png')] py-10 bg-auto bg-repeat text-white w-screen h-full">
+    <div className="flex py-10   text-white w-screen h-full">
       <div className="flex flex-col text-center m-auto">
         <div className="flex flex-col max-w-xl">
           <div className="flex bg-white flex-col gap-1 pt-6">
             <span className="text-black font-bold text-4xl">Word Hunt Solver</span>
-            <span className="text-[#8CA88B] text-2xl">fill in the grid to find all the words</span>
+            <span className="text-[#5D945C] text-xl">fill in the grid to find all the words</span>
           </div>
           <img className="flex -translate-y-1" src="paper.png" alt="" />
         </div>
-        <div className="flex gap-4 mt-10">
+        <span className="text-center text-[#D6EDD5] mt-6">if this helps you beat your friends give me a follow on twitter</span>
+        <span className="text-white text-center font-bold">@bvvst</span>
+        <div className="flex gap-4 mt-6">
           <div className="flex flex-col">
           <AuthCode length={16} inputClassName="w-16 h-16 rounded-md text-black text-center font-bold text-[44px] uppercase bg-[url('/tile.png')] bg-contain drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)]"
         containerClassName="grid grid-cols-4 gap-3 p-3 bg-[#495D45] border-4 border-[#A4E693] rounded-xl"
